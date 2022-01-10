@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatable" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocerry</title>
+
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/grocery.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+</head>
+<body>
+   
+    <nav class='navbar'>
+        <div class="nav">
+            <img src="img/freshworld1.png" class="brand-logo" alt="">
+            <div class="nav-items">
+                <div class="search">
+                    <input type="text" class="search-box" placeholder="search for vegetables and other products">
+                    <button class="search-btn">search</button>
+                </div>
+                <a href="#"><img src="img/profilelogo.jpg" alt=""></a>
+                <a class="nav-link text-whit btn" id="cart" type="button" data-toggle="modal"
+            data-target="#exampleModalScrollable" onclick="cart()"><i class="fas fa-cart-arrow-down"></i>
+            My Cart</a>
+            </div>
+       
+        </div>
+        <ul class="links-container">
+            <li class="link-item"><a href="#" class="link">Vegetables</a></li>
+            <li class="link-item"><a href="#" class="link">Fruits</a></li>
+            <li class="link-item"><a href="#" class="link">Food grains and spices</a></li>
+            <li class="link-item"><a href="#" class="link">Dairy </a></li>
+            <li class="link-item"><a href="#" class="link">Beverages</a></li>
+            <li class="link-item"><a href="#" class="link">snacks</a></li>
+            <li class="link-item"><a href="#" class="link">Dry fruits</a></li>
+            <li class="link-item"><a href="#" class="link">cleaning </a></li>
+        </ul>
+    </nav>
+    
+    <!-- hero section -->
+    <header class="hero-section">
+        <div class="content">
+            <img src="img/" class="logo" alt="">
+            <p class="sub-heading">The best farm fresh collection</p>
+        </div>
+    </header>
+    
+    <!-- products container-->
+    <section class="product">
+        <h2 class="product-category">Essential items</h2>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="product-image" >
+                    <span class="discount-tag">20% off</span>
+                    <img src="img/tomatoes.jpg" class="product-thumb" alt="">
+                    <button class="card-btn" onclick="addToCart(1)">add to cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">tomato</h2>
+                    <p class="product-short-des">Tomato-local, Grade-A</p>
+                    <span class="price">Rs 62</span><span class="actual-price">Rs 77.5</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">36% off</span>
+                    <img src="img/onions.jpg" class="product-thumb" alt="">
+                    <button class="card-btn" onclick="addToCart(2)">add to cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">onion</h2>
+                    <p class="product-short-des">onion-medium</p>
+                    <span class="price">Rs 41</span><span class="actual-price">Rs 65</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">31% off</span>
+                    <img src="img/chillies.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">chilli</h2>
+                    <p class="product-short-des">Fresh chilli-green long, medium</p>
+                    <span class="price">Rs 21</span><span class="actual-price">Rs 31</span>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <span class="discount-tag">28% off</span>
+                    <img src="img/potatoes.jpg" class="product-thumb" alt="">
+                    <button class="card-btn">add to cart</button>
+                </div>
+                <div class="product-info">
+                    <h2 class="product-brand">potato</h2>
+                    <p class="product-short-des">Fresh potato</p>
+                    <span class="price">Rs 34</span><span class="actual-price">Rs 47</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- modal starts here -->
+    <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalScrollableTitle"><i class="fas fa-cart-arrow-down"></i>My Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- listing items starts -->
+          <div>
+            <ul class="list">
+
+            </ul>
+            <div>
+              <h3 class="bill px-5">Select Something</h3>
+            </div>
+            <div>
+              <a href="checkout.html" class="btn checkout m-3">Checkout</a>
+            </div>
+          </div>
+          <!-- listing items ends -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal ends here -->
+  <!-- <button id="cart"  type="button" class="btn m-5" data-toggle="modal" data-target="#exampleModalScrollable" onclick="cart()">My Cart</button>
+  -->
+    
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="script.js"></script>
+</body>
+</html>
